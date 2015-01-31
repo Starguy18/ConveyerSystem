@@ -2,7 +2,6 @@ package org.usfirst.frc.team3467.robot;
 
 
 import edu.wpi.first.wpilibj.*;
-import edu.wpi.first.wpilibj.hal.CanTalonSRX;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
 /**
@@ -13,7 +12,7 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
  */
 public class RobotMap {
 
-	public static Talon ConveyerConveyerTalon;
+	public static TalonSRX ConveyerConveyerTalon;
 	public static Solenoid ConveyerConveyerSolenoid;
 	public static SolenoidBase ConveyerSolenoidBase1;
 	
@@ -29,8 +28,8 @@ public class RobotMap {
 
 
 	public static void initial(){
-		ConveyerConveyerTalon = new Talon(0);
-		LiveWindow.addActuator("Conveyer", "Conveyer Talon", (Talon) ConveyerConveyerTalon);
+		ConveyerConveyerTalon = new TalonSRX(0);
+		LiveWindow.addActuator("Conveyer", "Conveyer Talon", (TalonSRX) ConveyerConveyerTalon);
 		
 		ConveyerConveyerSolenoid = new Solenoid(0, 0);
 		LiveWindow.addActuator("Conveyer", "ConveyerSolenoid", (Solenoid) ConveyerConveyerSolenoid);
